@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<class-diagram>
+ <association show-direction="true" level="0" type="default" name="Assoziation" id="1" perpendicular="true">
+  <side-a navigability="undefined" role="Apfel" multiplicity="0..1" visibility="public"/>
+  <begin-node position-y="-350" position-x="600"/>
+  <end-node position-y="-350" position-x="-750"/>
+  <side-b navigability="undefined" role="Kartoffel" multiplicity="*..*" visibility="private"/>
+ </association>
+ <association show-direction="true" level="1" type="default" name="Auto" id="2" perpendicular="true">
+  <side-a navigability="undefined" role="Tomate" multiplicity="1..4" visibility="private"/>
+  <begin-node position-y="-150" position-x="-200"/>
+  <node position-y="-150" position-x="-850"/>
+  <end-node position-y="200" position-x="-850"/>
+  <side-b navigability="undefined" role="Kirsche" multiplicity="4" visibility="package"/>
+ </association>
+ <association show-direction="true" level="2" type="default" name="Banane" id="3" perpendicular="true">
+  <side-a navigability="undefined" role="Appel" multiplicity="*" visibility="public"/>
+  <begin-node position-y="402" position-x="-60"/>
+  <end-node position-y="-248" position-x="-60"/>
+  <side-b navigability="undefined" role="Apple" multiplicity="5..*" visibility="private"/>
+ </association>
+ <association show-direction="true" level="3" type="default" name="Auto" id="4" perpendicular="true">
+  <side-a navigability="undefined" role="Tomate" multiplicity="1..4" visibility="private"/>
+  <begin-node position-y="-100" position-x="100"/>
+  <node position-y="-100" position-x="750"/>
+  <end-node position-y="250" position-x="750"/>
+  <side-b navigability="undefined" role="Kirsche" multiplicity="4" visibility="package"/>
+ </association>
+</class-diagram>

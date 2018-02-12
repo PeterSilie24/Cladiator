@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128mm"
+   height="128mm"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="new-composition.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="119.28434"
+     inkscape:cy="492.97598"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-169)">
+    <path
+       style="fill:#000000;fill-opacity:1;stroke-width:0.9408195"
+       d="M 104.07422 0 L 37.794922 113.38672 L 82.882812 192.49219 L 82.882812 221.73242 L 82.880859 221.73242 L 82.880859 262.04688 L 82.882812 262.04688 L 123.22656 262.04688 L 183.74414 262.04688 L 284.60547 262.04688 L 345.12109 262.04688 L 405.63867 262.04688 L 405.63867 322.51953 L 405.66797 322.51953 L 405.66797 382.99219 L 405.63867 382.99219 L 405.63867 483.7793 L 445.98438 483.7793 L 445.98438 382.99219 L 445.98242 382.99219 L 445.98242 322.51953 L 445.98242 262.04688 L 445.98242 221.73242 L 405.63867 221.73242 L 345.12109 221.73242 L 284.60547 221.73242 L 183.74414 221.73242 L 123.22656 221.73242 L 123.22656 191.17773 L 168.69922 113.38672 L 104.07422 0 z "
+       transform="matrix(0.26458333,0,0,0.26458333,0,169)"
+       id="rect815-7" />
+  </g>
+</svg>

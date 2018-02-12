@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Header Files\class-diagram">
+      <UniqueIdentifier>{220f612a-f912-4531-b9b4-f6f6a42bffb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\class-diagram">
+      <UniqueIdentifier>{74d41790-e4a4-4cd3-acc2-26dbfab3dd50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\config">
+      <UniqueIdentifier>{59360c69-bd9b-426f-800d-65f8d0f4b57e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\config">
+      <UniqueIdentifier>{974cbc76-9153-4a90-b3df-8cf18fb90ad8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\content">
+      <UniqueIdentifier>{a596e7ae-96fb-4188-8cd3-57b8015f95f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\content">
+      <UniqueIdentifier>{183beac1-128d-4fb4-b097-227d559309fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\dialogs">
+      <UniqueIdentifier>{c39a84b1-0a25-4ea1-86da-1375f0b2dffc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dialogs">
+      <UniqueIdentifier>{0e76d3b0-7ac7-4e89-8ecd-e78433403d74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dialogs">
+      <UniqueIdentifier>{44e8c755-d3a5-4820-a4cf-b0af076616d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\document">
+      <UniqueIdentifier>{8c1fc539-95a8-4e02-ab24-7d054f720937}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\document">
+      <UniqueIdentifier>{14538459-0ee1-4f49-b24d-865185c6ec9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\items">
+      <UniqueIdentifier>{c69c6673-c877-4563-b21a-5c0cb2a13482}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\items">
+      <UniqueIdentifier>{c6861a7a-e7b0-4622-a20e-a99c5b1c9135}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\item-scene">
+      <UniqueIdentifier>{99539594-9ea2-4135-a735-520c1b150682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\item-scene">
+      <UniqueIdentifier>{ddf43308-9c56-4f7c-a404-51e29f5e309a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\resources">
+      <UniqueIdentifier>{7a0f80ac-56c0-4efc-b224-b575ddf84613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils">
+      <UniqueIdentifier>{107890e7-f57b-4bc0-8350-cf8e2f9b010e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{fa0ee66a-d515-47c7-b50a-13f06a40c649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files\translations">
+      <UniqueIdentifier>{dc9e6977-e4b2-466c-9216-41ae19bccf97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\cladiator">
+      <UniqueIdentifier>{e72de0f2-079a-48d1-9959-c3908a784d29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\cladiator">
+      <UniqueIdentifier>{166e6dc4-b2bb-401a-8bed-db3c4549acba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cladiator">
+      <UniqueIdentifier>{d8dd9677-396a-40d3-b312-21243ee74fc7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="class-diagram\class-diagram.hpp">
+      <Filter>Header Files\class-diagram</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\about.ui">
+      <Filter>Form Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\association-editor.ui">
+      <Filter>Form Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\attribute-editor.ui">
+      <Filter>Form Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\class-editor.ui">
+      <Filter>Form Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\comment-editor.ui">
+      <Filter>Form Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\export-as-image.ui">
+      <Filter>Form Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\license.ui">
+      <Filter>Form Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\method-editor.ui">
+      <Filter>Form Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\parameter-editor.ui">
+      <Filter>Form Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\preferences.ui">
+      <Filter>Form Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\about.hpp">
+      <Filter>Header Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\association-editor.hpp">
+      <Filter>Header Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\attribute-editor.hpp">
+      <Filter>Header Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\class-editor.hpp">
+      <Filter>Header Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\comment-editor.hpp">
+      <Filter>Header Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\export-as-image.hpp">
+      <Filter>Header Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\license.hpp">
+      <Filter>Header Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\method-editor.hpp">
+      <Filter>Header Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\parameter-editor.hpp">
+      <Filter>Header Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dialogs\preferences.hpp">
+      <Filter>Header Files\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="document\document.hpp">
+      <Filter>Header Files\document</Filter>
+    </CustomBuild>
+    <CustomBuild Include="items\aggregation-item.hpp">
+      <Filter>Header Files\items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="items\association-item.hpp">
+      <Filter>Header Files\items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="items\class-item.hpp">
+      <Filter>Header Files\items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="items\comment-item.hpp">
+      <Filter>Header Files\items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="items\composition-item.hpp">
+      <Filter>Header Files\items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="items\connection-item.hpp">
+      <Filter>Header Files\items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="items\generalization-item.hpp">
+      <Filter>Header Files\items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="items\item.hpp">
+      <Filter>Header Files\items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="items\realization-item.hpp">
+      <Filter>Header Files\items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="utils\action.hpp">
+      <Filter>Header Files\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="resources\cladiator.qrc">
+      <Filter>Resource Files\resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="cladiator\cladiator.ui">
+      <Filter>Form Files\cladiator</Filter>
+    </CustomBuild>
+    <CustomBuild Include="cladiator\cladiator.hpp">
+      <Filter>Header Files\cladiator</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config\info.hpp">
+      <Filter>Header Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="config\settings.hpp">
+      <Filter>Header Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="content\association.hpp">
+      <Filter>Header Files\content</Filter>
+    </ClInclude>
+    <ClInclude Include="content\class.hpp">
+      <Filter>Header Files\content</Filter>
+    </ClInclude>
+    <ClInclude Include="content\comment.hpp">
+      <Filter>Header Files\content</Filter>
+    </ClInclude>
+    <ClInclude Include="content\connection.hpp">
+      <Filter>Header Files\content</Filter>
+    </ClInclude>
+    <ClInclude Include="content\content.hpp">
+      <Filter>Header Files\content</Filter>
+    </ClInclude>
+    <ClInclude Include="content\generalization.hpp">
+      <Filter>Header Files\content</Filter>
+    </ClInclude>
+    <ClInclude Include="content\navigability.hpp">
+      <Filter>Header Files\content</Filter>
+    </ClInclude>
+    <ClInclude Include="content\realization.hpp">
+      <Filter>Header Files\content</Filter>
+    </ClInclude>
+    <ClInclude Include="content\visibility.hpp">
+      <Filter>Header Files\content</Filter>
+    </ClInclude>
+    <ClInclude Include="generated-files\$(ConfigurationName)\ui_about.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generated-files\$(ConfigurationName)\ui_association-editor.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generated-files\$(ConfigurationName)\ui_attribute-editor.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generated-files\$(ConfigurationName)\ui_class-editor.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generated-files\$(ConfigurationName)\ui_comment-editor.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generated-files\$(ConfigurationName)\ui_export-as-image.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generated-files\$(ConfigurationName)\ui_license.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generated-files\$(ConfigurationName)\ui_method-editor.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generated-files\$(ConfigurationName)\ui_parameter-editor.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generated-files\$(ConfigurationName)\ui_preferences.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="item-scene\identifier.hpp">
+      <Filter>Header Files\item-scene</Filter>
+    </ClInclude>
+    <ClInclude Include="item-scene\item-dragger.hpp">
+      <Filter>Header Files\item-scene</Filter>
+    </ClInclude>
+    <ClInclude Include="item-scene\item-scene.hpp">
+      <Filter>Header Files\item-scene</Filter>
+    </ClInclude>
+    <ClInclude Include="item-scene\undo-redo.hpp">
+      <Filter>Header Files\item-scene</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\icons.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\math.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\reg-exp.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\translator.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\xml.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="generated-files\$(ConfigurationName)\ui_cladiator.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="generated-files\Debug\moc_class-diagram.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_class-diagram.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="class-diagram\class-diagram.cpp">
+      <Filter>Source Files\class-diagram</Filter>
+    </ClCompile>
+    <ClCompile Include="config\info.cpp">
+      <Filter>Source Files\config</Filter>
+    </ClCompile>
+    <ClCompile Include="config\settings.cpp">
+      <Filter>Source Files\config</Filter>
+    </ClCompile>
+    <ClCompile Include="content\association.cpp">
+      <Filter>Source Files\content</Filter>
+    </ClCompile>
+    <ClCompile Include="content\class.cpp">
+      <Filter>Source Files\content</Filter>
+    </ClCompile>
+    <ClCompile Include="content\comment.cpp">
+      <Filter>Source Files\content</Filter>
+    </ClCompile>
+    <ClCompile Include="content\connection.cpp">
+      <Filter>Source Files\content</Filter>
+    </ClCompile>
+    <ClCompile Include="content\content.cpp">
+      <Filter>Source Files\content</Filter>
+    </ClCompile>
+    <ClCompile Include="content\generalization.cpp">
+      <Filter>Source Files\content</Filter>
+    </ClCompile>
+    <ClCompile Include="content\navigability.cpp">
+      <Filter>Source Files\content</Filter>
+    </ClCompile>
+    <ClCompile Include="content\realization.cpp">
+      <Filter>Source Files\content</Filter>
+    </ClCompile>
+    <ClCompile Include="content\visibility.cpp">
+      <Filter>Source Files\content</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_about.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_about.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_association-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_association-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_attribute-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_attribute-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_class-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_class-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_comment-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_comment-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_export-as-image.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_export-as-image.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_license.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_license.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_method-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_method-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_parameter-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_parameter-editor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_preferences.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_preferences.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\about.cpp">
+      <Filter>Source Files\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\association-editor.cpp">
+      <Filter>Source Files\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\attribute-editor.cpp">
+      <Filter>Source Files\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\class-editor.cpp">
+      <Filter>Source Files\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\comment-editor.cpp">
+      <Filter>Source Files\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\export-as-image.cpp">
+      <Filter>Source Files\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\license.cpp">
+      <Filter>Source Files\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\method-editor.cpp">
+      <Filter>Source Files\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\parameter-editor.cpp">
+      <Filter>Source Files\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="dialogs\preferences.cpp">
+      <Filter>Source Files\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_document.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_document.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="document\document.cpp">
+      <Filter>Source Files\document</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_aggregation-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_aggregation-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_association-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_association-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_class-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_class-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_comment-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_comment-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_composition-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_composition-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_connection-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_connection-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_generalization-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_generalization-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_realization-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_realization-item.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="items\aggregation-item.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="items\association-item.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="items\class-item.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="items\comment-item.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="items\composition-item.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="items\connection-item.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="items\generalization-item.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="items\item.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="items\realization-item.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="item-scene\identifier.cpp">
+      <Filter>Source Files\item-scene</Filter>
+    </ClCompile>
+    <ClCompile Include="item-scene\item-dragger.cpp">
+      <Filter>Source Files\item-scene</Filter>
+    </ClCompile>
+    <ClCompile Include="item-scene\item-scene.cpp">
+      <Filter>Source Files\item-scene</Filter>
+    </ClCompile>
+    <ClCompile Include="item-scene\undo-redo.cpp">
+      <Filter>Source Files\item-scene</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_action.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_action.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\action.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\icons.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\math.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\reg-exp.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\translator.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\xml.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\$(ConfigurationName)\qrc_cladiator.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Debug\moc_cladiator.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated-files\Release\moc_cladiator.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cladiator\cladiator.cpp">
+      <Filter>Source Files\cladiator</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\cladiator.ico">
+      <Filter>Resource Files\resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\cladiator.rc">
+      <Filter>Resource Files\resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\translations\cladiator_de.ts">
+      <Filter>Translation Files\translations</Filter>
+    </None>
+    <None Include="..\translations\cladiator_en.ts">
+      <Filter>Translation Files\translations</Filter>
+    </None>
+  </ItemGroup>
+</Project>

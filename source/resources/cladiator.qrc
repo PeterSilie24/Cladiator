@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/cladiator">
+        <file>icons/cladiator.svg</file>
+        <file>icons/close.svg</file>
+        <file>icons/close-hover.svg</file>
+        <file>license/gpl.txt</file>
+    </qresource>
+</RCC>
