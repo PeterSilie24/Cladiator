@@ -856,8 +856,6 @@ QVector<UndoRedoEvent> ConnectionItem::anchorConnectionEvent(const EndNode& begi
 
 		this->anchored = true;
 
-		//this->setSelected(true);
-
 		return QVector<UndoRedoEvent>({ UndoRedoEvent(undo, redo) });
 	}
 

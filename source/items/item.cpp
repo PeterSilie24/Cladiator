@@ -156,13 +156,13 @@ QColor SelectableItem::getBackgroundColor() const
 {
 	QColor color = Settings::getColor(Colors::Background);
 
-	qreal avarage = (color.redF() + color.greenF() + color.blueF()) / 3.0;
+	int avarage = (color.red() + color.green() + color.blue()) / 3;
 
-	qreal factor = -avarage * 3.0 + 2.0;
+	int factor = 1;
 
-	if (factor < 1.0 && factor > -1.0)
+	if (avarage > 127)
 	{
-		factor = 1.0 * qAbs(factor) / factor;
+		factor = -1;
 	}
 
 	int offset = 0;
@@ -176,7 +176,7 @@ QColor SelectableItem::getBackgroundColor() const
 		offset = 16;
 	}
 
-	offset = static_cast<int>(static_cast<qreal>(offset) * factor);
+	offset = offset * factor;
 
 	return QColor(qMax(qMin(color.red() + offset, 255), 0), qMax(qMin(color.green() + offset, 255), 0), qMax(qMin(color.blue() + offset, 255), 0));
 }

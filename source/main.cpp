@@ -29,7 +29,7 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication application(argc, argv);
+	QApplication application(argc, argv);
 
 	Settings settings;
 
@@ -43,9 +43,9 @@ int main(int argc, char *argv[])
 
 	RegExp regExp;
 
-    Cladiator cladiator;
+	Cladiator cladiator;
 
 	cladiator.show();
 
-    return application.exec();
+	return application.exec();
 }
