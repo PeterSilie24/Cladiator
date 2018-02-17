@@ -188,7 +188,7 @@ class Class : public PositionableContent
 public:
 	Class();
 
-	Class(const QString& name, const QString& stereotype, bool abstract, const QVector<Attribute>& attributes, const QVector<Method>& methods);
+	Class(const QString& name, const QString& keyword, bool abstract, const QVector<Attribute>& attributes, const QVector<Method>& methods);
 
 	Class(QDomElement element);
 
@@ -204,9 +204,9 @@ public:
 
 	void setName(const QString& name);
 
-	const QString& getStereotype() const;
+	const QString& getKeyword() const;
 
-	void setStereotype(const QString& stereotype);
+	void setKeyword(const QString& keyword);
 
 	bool isAbstract() const;
 
@@ -250,7 +250,7 @@ public:
 
 private:
 	QString name;
-	QString stereotype;
+	QString keyword;
 	bool abstract;
 
 	QVector<Attribute> attributes;

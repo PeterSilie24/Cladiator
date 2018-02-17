@@ -501,11 +501,11 @@ Class::Class()
 	this->setAbstract(false);
 }
 
-Class::Class(const QString& name, const QString& stereotype, bool abstract, const QVector<Attribute>& attributes, const QVector<Method>& methods)
+Class::Class(const QString& name, const QString& keyword, bool abstract, const QVector<Attribute>& attributes, const QVector<Method>& methods)
 {
 	this->setName(name);
 
-	this->setStereotype(stereotype);
+	this->setKeyword(keyword);
 
 	this->setAbstract(abstract);
 
@@ -518,7 +518,7 @@ Class::Class(QDomElement element) : PositionableContent(element)
 {
 	this->setName(element.attribute("name"));
 
-	this->setStereotype(element.attribute("stereotype"));
+	this->setKeyword(element.attribute("keyword"));
 
 	this->setAbstract((element.attribute("abstract") == "true") ? true : false);
 
@@ -537,7 +537,7 @@ void Class::appendXml(QDomElement element, const Identifier& id, quint64 level, 
 	PositionableContent::appendXml(element, id, level, position);
 
 	element.setAttribute("name", this->name);
-	element.setAttribute("stereotype", this->stereotype);
+	element.setAttribute("keyword", this->keyword);
 	element.setAttribute("abstract", this->abstract ? "true" : "false");
 
 	for (auto& attribute : this->attributes)
@@ -555,7 +555,7 @@ bool Class::operator==(const Class& other) const
 {
 	if (this->name != other.name) { return false; }
 
-	if (this->stereotype != other.stereotype) { return false; }
+	if (this->keyword != other.keyword) { return false; }
 
 	if (this->abstract != other.abstract) { return false; }
 
@@ -591,14 +591,14 @@ void Class::setName(const QString& name)
 	this->name = RegExp::validate(name);
 }
 
-const QString& Class::getStereotype() const
+const QString& Class::getKeyword() const
 {
-	return this->stereotype;
+	return this->keyword;
 }
 
-void Class::setStereotype(const QString& stereotype)
+void Class::setKeyword(const QString& keyword)
 {
-	this->stereotype = RegExp::validate(stereotype);
+	this->keyword = RegExp::validate(keyword);
 }
 
 bool Class::isAbstract() const

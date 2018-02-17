@@ -44,14 +44,14 @@
     </spacer>
    </item>
    <item>
-    <widget class="QLabel" name="labelStereotype">
+    <widget class="QLabel" name="labelKeyword">
      <property name="text">
-      <string>Stereotype:</string>
+      <string>Keyword:</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEditStereotype"/>
+    <widget class="QLineEdit" name="lineEditKeyword"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">

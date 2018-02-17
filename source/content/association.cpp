@@ -199,7 +199,7 @@ const QString& Association::getName() const
 
 void Association::setName(const QString& name)
 {
-	this->name = RegExp::validate(name);
+	this->name = name;
 }
 
 bool Association::isShowDirection() const

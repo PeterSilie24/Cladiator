@@ -619,7 +619,7 @@
     </message>
     <message>
         <location filename="../source/dialogs/class-editor.ui" line="49"/>
-        <source>Stereotype:</source>
+        <source>Keyword:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

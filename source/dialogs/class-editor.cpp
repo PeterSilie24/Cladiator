@@ -28,17 +28,17 @@ ClassEditor::ClassEditor(QWidget* parent, const Class& c)
 
 	this->ui.lineEditName->setText(c.getName());
 
-	this->ui.lineEditStereotype->setValidator(RegExp::getValidator());
+	this->ui.lineEditKeyword->setValidator(RegExp::getValidator());
 
-	this->ui.lineEditStereotype->setText(c.getStereotype());
+	this->ui.lineEditKeyword->setText(c.getKeyword());
 
-	this->connect(this->ui.lineEditStereotype, SIGNAL(textChanged(const QString&)), this, SLOT(textChanged(const QString&)));
+	this->connect(this->ui.lineEditKeyword, SIGNAL(textChanged(const QString&)), this, SLOT(textChanged(const QString&)));
 
-	this->ui.checkBoxInterface->setChecked(c.getStereotype() == "interface");
+	this->ui.checkBoxInterface->setChecked(c.getKeyword() == "interface");
 
 	this->connect(this->ui.checkBoxInterface, SIGNAL(stateChanged(int)), this, SLOT(stateChanged(int)));
 
-	this->oldStereotype = c.getStereotype();
+	this->oldKeyword = c.getKeyword();
 
 	this->ui.checkBoxAbstract->setChecked(c.isAbstract());
 
@@ -115,7 +115,7 @@ Class& ClassEditor::getClass()
 {
 	this->c.setName(this->ui.lineEditName->text());
 
-	this->c.setStereotype(this->ui.lineEditStereotype->text());
+	this->c.setKeyword(this->ui.lineEditKeyword->text());
 
 	this->c.setAbstract(this->ui.checkBoxAbstract->isChecked());
 
@@ -131,21 +131,21 @@ void ClassEditor::stateChanged(int state)
 {
 	if (state)
 	{
-		this->oldStereotype = this->ui.lineEditStereotype->text();
+		this->oldKeyword = this->ui.lineEditKeyword->text();
 
-		this->ui.lineEditStereotype->setText("interface");
+		this->ui.lineEditKeyword->setText("interface");
 	}
 	else
 	{
-		if (this->ui.lineEditStereotype->text() == "interface")
+		if (this->ui.lineEditKeyword->text() == "interface")
 		{
-			if (this->oldStereotype != "interface")
+			if (this->oldKeyword != "interface")
 			{
-				this->ui.lineEditStereotype->setText(this->oldStereotype);
+				this->ui.lineEditKeyword->setText(this->oldKeyword);
 			}
 			else
 			{
-				this->ui.lineEditStereotype->setText("");
+				this->ui.lineEditKeyword->setText("");
 			}
 		}
 	}

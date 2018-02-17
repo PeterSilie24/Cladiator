@@ -24,8 +24,6 @@ AssociationEditor::AssociationEditor(QWidget* parent, const Association& associa
 
 	this->setWindowFlags(this->windowFlags() & ~Qt::WindowType::WindowContextHelpButtonHint);
 
-	this->ui.lineEditName->setValidator(RegExp::getValidator());
-
 	this->ui.lineEditName->setText(association.getName());
 
 	this->ui.checkBoxShowDirection->setChecked(association.isShowDirection());

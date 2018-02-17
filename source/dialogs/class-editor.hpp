@@ -78,5 +78,5 @@ private:
 
 	Class c;
 
-	QString oldStereotype;
+	QString oldKeyword;
 };

@@ -619,8 +619,8 @@
     </message>
     <message>
         <location filename="../source/dialogs/class-editor.ui" line="49"/>
-        <source>Stereotype:</source>
-        <translation>Stereotyp:</translation>
+        <source>Keyword:</source>
+        <translation>Schlüsselwort:</translation>
     </message>
     <message>
         <location filename="../source/dialogs/class-editor.ui" line="74"/>

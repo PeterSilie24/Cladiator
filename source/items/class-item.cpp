@@ -228,9 +228,9 @@ void ClassItem::updateGeometry()
 
 	QString html = "<font " + Settings::getColorHtmlStyle() + "><center>";
 
-	if (this->c.getStereotype() != "")
+	if (this->c.getKeyword() != "")
 	{
-		html += "<font " + Settings::getFontHtmlStyle() + " " + Settings::getColorHtmlStyle(Colors::Value) + ">&lt;&lt;" + this->c.getStereotype().toHtmlEscaped() + "&gt;&gt;</font><br>";
+		html += "<font " + Settings::getFontHtmlStyle() + " " + Settings::getColorHtmlStyle(Colors::Value) + ">&lt;&lt;" + this->c.getKeyword().toHtmlEscaped() + "&gt;&gt;</font><br>";
 	}
 
 	if (this->c.isAbstract())
