@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Settings.hpp"
+#include "settings.hpp"
 
 #include "dialogs/preferences.hpp"
 

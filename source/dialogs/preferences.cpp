@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Preferences.hpp"
+#include "preferences.hpp"
 
 Preferences::Preferences(const Settings::StructSettings& settings, QWidget* parent)
 	: QDialog(parent), settings(settings)
