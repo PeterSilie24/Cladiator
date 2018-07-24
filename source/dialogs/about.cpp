@@ -38,40 +38,21 @@ About::About(QWidget* parent)
 
 	html += "<br><img src=\"" + Icons::getResourceIconsDir().toHtmlEscaped() + Info::getApplicationIconName().toHtmlEscaped() + ".svg" + "\" width=\"96\" height=\"96\">";
 
-	html += "<h1>" + Info::getApplicationName().toHtmlEscaped() + "</h1>";
+	html += "<p><font style=\"font-size: 24px;\"><b>" + Info::getApplicationName().toHtmlEscaped() + "</b></font></p>";
 
-	html += "<p><h3>" + Info::getApplicationDescription().toHtmlEscaped() + " " + Info::getVersion().toString().toHtmlEscaped() + "</h3></p>";
+	html += "<p><font style=\"font-size: 18px;\"><b>" + Info::getApplicationDescription().toHtmlEscaped() + " " + Info::getVersion().toString().toHtmlEscaped() + "</b></font></p>";
 
-	html += "<p><font style=\"font-size: 10px;\">Copyright &copy; " + Info::getCopyright().toHtmlEscaped() + "</font></p>";
+	html += "<p><font style=\"font-size: 12px;\">Copyright &copy; " + Info::getCopyright().toHtmlEscaped() + "</font><br></p>";
+
+	html += "<p><font style=\"font-size: 11px;\">" + tr("Source code:").toHtmlEscaped() + "</font><br>";
+
+	html += "<font style=\"font-size: 10px;\"><a href=\"https://github.com/PeterSilie24/Cladiator\">https://github.com/PeterSilie24/Cladiator</a></font></p>";
 
 	html += "</center>";
 
-	this->document.setHtml(html);
+	this->ui.labelSourceCode->setText(html);
 
-	QSizeF size = this->document.documentLayout()->documentSize();
-
-	size.setWidth(qMax(size.width(), static_cast<qreal>(this->width())) + 40.0);
-
-	size.setHeight(qMax(size.height(), static_cast<qreal>(this->height())) + 75.0);
-
-	this->setFixedSize(size.toSize());
-
-	this->document.setTextWidth(size.width());
-}
-
-void About::paintEvent(QPaintEvent* event)
-{
-	Q_UNUSED(event);
-
-	QPainter painter(this);
-
-	painter.setRenderHints(QPainter::RenderHint::Antialiasing | QPainter::RenderHint::SmoothPixmapTransform | QPainter::RenderHint::HighQualityAntialiasing | QPainter::RenderHint::TextAntialiasing);
-
-	QPen pen;
-
-	painter.setPen(pen);
-
-	document.drawContents(&painter);
+	this->ui.labelSourceCode->setOpenExternalLinks(true);
 }
 
 void About::pushButtonLicenseClicked()

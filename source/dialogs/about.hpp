@@ -37,14 +37,9 @@ class About : public QDialog
 public:
 	About(QWidget* parent);
 
-protected:
-	void paintEvent(QPaintEvent* event) override;
-
 private slots:
 	void pushButtonLicenseClicked();
 
 private:
 	Ui::AboutDialog ui;
-
-	QTextDocument document;
 };

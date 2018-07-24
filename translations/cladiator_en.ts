@@ -2,6 +2,14 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="en_US">
 <context>
+    <name>About</name>
+    <message>
+        <location filename="../source/dialogs/about.cpp" line="47"/>
+        <source>Source code:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>AboutDialog</name>
     <message>
         <location filename="../source/dialogs/about.ui" line="14"/>
@@ -9,12 +17,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../source/dialogs/about.ui" line="63"/>
+        <location filename="../source/dialogs/about.ui" line="125"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../source/dialogs/about.ui" line="73"/>
+        <location filename="../source/dialogs/about.ui" line="135"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
