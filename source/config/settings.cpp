@@ -29,7 +29,7 @@ Settings::ColorOption::ColorOption(QColor color, QString name, QString descripti
 
 }
 
-Settings::StructSettings::StructSettings() : savePerUser(false), language(""), font(QApplication::font())
+Settings::StructSettings::StructSettings() : saveLocally(true), language(""), font(QApplication::font())
 {
 	this->colors.append(ColorOption(QColor("#000000"), "Default", QT_TRANSLATE_NOOP("QObject", "Default")));
 	this->colors.append(ColorOption(QColor("#FFFFFF"), "Background", QT_TRANSLATE_NOOP("QObject", "Background")));
@@ -59,12 +59,12 @@ QString Settings::getSettingsDir()
 
 	if (settings)
 	{
-		if (settings->savePerUser)
+		if (!settings->saveLocally)
 		{
 			return getUserSettingsDir();
 		}
 
-		return getGlobalSettingsDir();
+		return getLocalSettingsDir();
 	}
 
 	return "";
@@ -81,6 +81,8 @@ bool Settings::change(QWidget* parent)
 		if (preferences.exec())
 		{
 			*settings = preferences.getSettings();
+
+			settings->saveLocally = settings->saveLocally && isLocallySavable();
 
 			save();
 
@@ -101,7 +103,7 @@ void Settings::save()
 	{
 		QSettings settings(getSettingsDir() + "settings.ini", QSettings::Format::IniFormat);
 
-		settings.setValue("SavePerUser", strongSettings->savePerUser);
+		settings.setValue("SaveLocally", strongSettings->saveLocally);
 
 		settings.setValue("Language", strongSettings->language);
 
@@ -130,12 +132,12 @@ void Settings::restore()
 
 		if (!file.exists())
 		{
-			path = getGlobalSettingsDir() + "settings.ini";
+			path = getLocalSettingsDir() + "settings.ini";
 		}
 
 		QSettings settings(path, QSettings::Format::IniFormat);
 
-		strongSettings->savePerUser = settings.value("SavePerUser", strongSettings->savePerUser).toBool();
+		strongSettings->saveLocally = settings.value("SaveLocally", strongSettings->saveLocally).toBool() && isLocallySavable();
 
 		strongSettings->language = settings.value("Language", strongSettings->language).toString();
 
@@ -158,7 +160,7 @@ void Settings::clear()
 
 	if (settings)
 	{
-		if (!settings->savePerUser)
+		if (settings->saveLocally)
 		{
 			QDir dir(getUserDir());
 
@@ -170,16 +172,38 @@ void Settings::clear()
 	}
 }
 
-bool Settings::isSavePerUser()
+bool Settings::isSaveLocally()
 {
 	QSharedPointer<StructSettings> settings = weakSettings.toStrongRef();
 
 	if (settings)
 	{
-		return settings->savePerUser;
+		return settings->saveLocally;
 	}
 
 	return false;
+}
+
+bool Settings::isLocallySavable()
+{
+	QFileInfo fileInfo(getLocalDir());
+
+	if (!fileInfo.isDir() || !fileInfo.isWritable())
+	{
+		return false;
+	}
+
+	fileInfo = QFileInfo(getLocalSettingsDir());
+
+	if (fileInfo.exists() && fileInfo.isDir())
+	{
+		if (!fileInfo.isWritable())
+		{
+			return false;
+		}
+	}
+
+	return true;
 }
 
 QString Settings::getLanguage()
@@ -254,11 +278,21 @@ QString Settings::getColorHtmlStyle(const Colors& color)
 	return "color=\"" + getColor(color).name() + "\"";
 }
 
-QString Settings::getGlobalSettingsDir()
+QString Settings::getLocalDir()
 {
 	if (weakSettings)
 	{
-		return QFileInfo(QCoreApplication::applicationFilePath()).absolutePath() + "/config/";
+		return QFileInfo(QCoreApplication::applicationFilePath()).absolutePath();
+	}
+
+	return "";
+}
+
+QString Settings::getLocalSettingsDir()
+{
+	if (weakSettings)
+	{
+		return getLocalDir() + "/config/";
 	}
 
 	return "";

@@ -68,6 +68,8 @@ bool Document::save(const QString& path)
 	{
 		QFileInfo fileInfo(path);
 
+		this->title = fileInfo.fileName();
+
 		this->diagram.resetChanged();
 
 		return true;

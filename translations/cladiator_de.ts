@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_US">
+<TS version="2.1" language="de_DE">
 <context>
     <name>About</name>
     <message>
@@ -17,12 +17,12 @@
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="../source/dialogs/about.ui" line="125"/>
+        <location filename="../source/dialogs/about.ui" line="138"/>
         <source>License</source>
         <translation>Lizenz</translation>
     </message>
     <message>
-        <location filename="../source/dialogs/about.ui" line="135"/>
+        <location filename="../source/dialogs/about.ui" line="148"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
@@ -1003,7 +1003,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../source/dialogs/preferences.cpp" line="52"/>
+        <location filename="../source/dialogs/preferences.cpp" line="54"/>
         <source>System default - </source>
         <translation>Systemvoreinstellung - </translation>
     </message>
@@ -1022,8 +1022,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../source/dialogs/preferences.ui" line="30"/>
-        <source>Save settings per user</source>
-        <translation>Einstellungen für jeden Benutzer unabhängig voneinander speichern</translation>
+        <source>Save settings in the local program directory</source>
+        <translation>Einstellungen im lokalen Programmverzeichnis speichern</translation>
     </message>
     <message>
         <location filename="../source/dialogs/preferences.ui" line="53"/>

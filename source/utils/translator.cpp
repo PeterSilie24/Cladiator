@@ -26,17 +26,17 @@ Translator::Translator()
 		this->weakTranslatorApp = this->strongTranslatorApp.toWeakRef();
 	}
 
-	if (!this->weakTranslatorBase)
+	if (!this->weakTranslatorQt)
 	{
-		this->strongTranslatorBase = QSharedPointer<QTranslator>(new QTranslator());
+		this->strongTranslatorQt = QSharedPointer<QTranslator>(new QTranslator());
 
-		this->weakTranslatorBase = this->strongTranslatorBase.toWeakRef();
+		this->weakTranslatorQt = this->strongTranslatorQt.toWeakRef();
 	}
 }
 
 QString Translator::getTranslationsDir()
 {
-	if (weakTranslatorApp && weakTranslatorBase)
+	if (weakTranslatorApp && weakTranslatorQt)
 	{
 		return QFileInfo(QCoreApplication::applicationFilePath()).absolutePath() + "/translations/";
 	}
@@ -48,7 +48,7 @@ QStringList Translator::getBcp47Translations()
 {
 	QStringList bcp47Translations;
 
-	if (weakTranslatorApp && weakTranslatorBase)
+	if (weakTranslatorApp && weakTranslatorQt)
 	{
 		QDir dir(getTranslationsDir());
 
@@ -61,17 +61,6 @@ QStringList Translator::getBcp47Translations()
 		for (auto& file : filesApp)
 		{
 			file = file.replace(Info::getFileName() + "_", "");
-
-			file = file.replace(".qm", "");
-		}
-
-		dir.setNameFilters({ "qtbase_*.qm" });
-
-		QStringList filesBase = dir.entryList();
-
-		for (auto& file : filesBase)
-		{
-			file = file.replace("qtbase_", "");
 
 			file = file.replace(".qm", "");
 
@@ -96,20 +85,23 @@ void Translator::loadTranslation(QApplication& application, const QLocale& local
 
 	QSharedPointer<QTranslator> translatorApp = weakTranslatorApp.toStrongRef();
 
-	QSharedPointer<QTranslator> translatorBase = weakTranslatorBase.toStrongRef();
+	QSharedPointer<QTranslator> translatorQt = weakTranslatorQt.toStrongRef();
 
-	if (translatorApp && translatorBase)
+	if (translatorApp && translatorQt)
 	{
 		translatorApp->load(locale, Info::getFileName(), "_", getTranslationsDir());
 
 		application.installTranslator(translatorApp.data());
 
-		translatorBase->load(locale, "qtbase", "_", getTranslationsDir());
+		if (!translatorQt->load(locale, "qt", "_", getTranslationsDir()))
+		{
+			translatorQt->load(locale, "qt", "_", QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+		}
 
-		application.installTranslator(translatorBase.data());
+		application.installTranslator(translatorQt.data());
 	}
 }
 
 QWeakPointer<QTranslator> Translator::weakTranslatorApp;
 
-QWeakPointer<QTranslator> Translator::weakTranslatorBase;
+QWeakPointer<QTranslator> Translator::weakTranslatorQt;

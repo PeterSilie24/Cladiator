@@ -17,12 +17,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../source/dialogs/about.ui" line="125"/>
+        <location filename="../source/dialogs/about.ui" line="138"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../source/dialogs/about.ui" line="135"/>
+        <location filename="../source/dialogs/about.ui" line="148"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1022,7 +1022,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../source/dialogs/preferences.ui" line="30"/>
-        <source>Save settings per user</source>
+        <source>Save settings in the local program directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

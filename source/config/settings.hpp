@@ -60,7 +60,7 @@ public:
 	{
 		StructSettings();
 
-		bool savePerUser;
+		bool saveLocally;
 		QString language;
 		QFont font;
 		QVector<ColorOption> colors;
@@ -78,7 +78,9 @@ public:
 
 	static void clear();
 
-	static bool isSavePerUser();
+	static bool isSaveLocally();
+
+	static bool isLocallySavable();
 
 	static QString getLanguage();
 
@@ -93,7 +95,9 @@ public:
 	static QString getColorHtmlStyle(const Colors& color = Colors::Default);
 
 private:
-	static QString getGlobalSettingsDir();
+	static QString getLocalDir();
+
+	static QString getLocalSettingsDir();
 
 	static QString getUserDir();
 

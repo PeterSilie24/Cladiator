@@ -20,6 +20,7 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QFileInfo>
+#include <QLibraryInfo>
 #include <QSharedPointer>
 #include <QWeakPointer>
 #include <QDir>
@@ -44,7 +45,7 @@ private:
 
 	static QWeakPointer<QTranslator> weakTranslatorApp;
 
-	QSharedPointer<QTranslator> strongTranslatorBase;
+	QSharedPointer<QTranslator> strongTranslatorQt;
 
-	static QWeakPointer<QTranslator> weakTranslatorBase;
+	static QWeakPointer<QTranslator> weakTranslatorQt;
 };

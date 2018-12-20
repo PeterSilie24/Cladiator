@@ -37,7 +37,9 @@ void Preferences::loadSettings(Settings::StructSettings settings)
 {
 	this->settings = settings;
 
-	this->ui.checkBoxSavePerUser->setChecked(settings.savePerUser);
+	this->ui.checkBoxSaveLocally->setEnabled(Settings::isLocallySavable());
+
+	this->ui.checkBoxSaveLocally->setChecked(settings.saveLocally);
 
 	settings.font.setPointSizeF(this->ui.lineEdit->font().pointSizeF());
 
@@ -102,7 +104,7 @@ void Preferences::loadSettings(Settings::StructSettings settings)
 
 const Settings::StructSettings& Preferences::getSettings()
 {
-	this->settings.savePerUser = this->ui.checkBoxSavePerUser->isChecked();
+	this->settings.saveLocally = this->ui.checkBoxSaveLocally->isChecked();
 
 	int index = this->ui.comboBoxLanguage->currentIndex();
 

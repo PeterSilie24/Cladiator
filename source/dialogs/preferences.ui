@@ -25,9 +25,9 @@
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
-        <widget class="QCheckBox" name="checkBoxSavePerUser">
+        <widget class="QCheckBox" name="checkBoxSaveLocally">
          <property name="text">
-          <string>Save settings per user</string>
+          <string>Save settings in the local program directory</string>
          </property>
         </widget>
        </item>
